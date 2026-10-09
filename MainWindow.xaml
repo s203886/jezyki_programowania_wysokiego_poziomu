@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pilot"
         mc:Ignorable="d"
-        Title="Pilot" Height="450" Width="800" KeyDown="Window_KeyDown">
+        Title="Pilot" Height="450" Width="800" KeyDown="Window_KeyDown" KeyUp="Main_window_KeyUp">
     <Canvas x:Name="Main_canva" HorizontalAlignment="Left" Height="197" Margin="246,66,0,0" VerticalAlignment="Top" Width="260">
         <Label x:Name="TEST" Content="Label"/>
     </Canvas>

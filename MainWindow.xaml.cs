@@ -23,7 +23,7 @@ namespace Pilot
         }
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            Key_codes key = new Key_codes();
+            Key_codes key = Key_codes.Other;
             switch (e.Key)
             {
                 case Key.Up:
@@ -40,8 +40,14 @@ namespace Pilot
                     break;
             }
             main_engine.set_lander_controls(key, player_ship);
-            TEST.Content = player_ship.get_angle().ToString();
+            TEST.Content = player_ship.get_angle().ToString() + ":" + player_ship.get_rocket_power() + ":" + player_ship.get_speed()[0] + ":" + player_ship.get_speed()[1] + ":" + player_ship.get_fuel();
             
+        }
+
+        private void Main_window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Up) player_ship.reset_rocket_power();
+            TEST.Content = player_ship.get_angle().ToString() + ":" + player_ship.get_rocket_power() +  ":" + player_ship.get_speed()[0] + ":" + player_ship.get_speed()[1]+ ":" + player_ship.get_fuel();
         }
     }
 }

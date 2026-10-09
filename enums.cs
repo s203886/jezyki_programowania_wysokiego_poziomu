@@ -4,6 +4,6 @@ using System.Text;
 
 namespace Pilot
 {
-    enum Key_codes {Up,Down,Left,Right};
+    enum Key_codes {Up,Down,Left,Right,Other};
     public enum Coords { x =0 , y =1 };
 }
